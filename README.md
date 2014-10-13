@@ -3,10 +3,49 @@
 For the second part of your long weekend lab, we'd like you to rewrite some underscore.js methods and tests that make them pass. The functions you will be implementing are:
 
 1. First -  [http://underscorejs.org/#first](http://underscorejs.org/#first)
+
+_.first(array, [n]) Alias: head, take 
+Returns the first element of an array. Passing n will return the first n elements of the array.
+
+_.first([5, 4, 3, 2, 1]);
+=> 5
+
 2. Last - [http://underscorejs.org/#last](http://underscorejs.org/#last)
+
+last_.last(array, [n]) 
+Returns the last element of an array. Passing n will return the last n elements of the array.
+
+_.last([5, 4, 3, 2, 1]);
+=> 1
+
 3. Uniq - [http://underscorejs.org/#uniq](http://underscorejs.org/#uniq)
+
+_.uniq(array, [isSorted], [iteratee]) Alias: unique 
+
+uniq_.uniq(array, [isSorted], [iteratee]) Alias: unique 
+Produces a duplicate-free version of the array, using === to test object equality. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iteratee function.
+
+_.uniq([1, 2, 1, 3, 1, 4]);
+=> [1, 2, 3, 4]
+
 4. Pluck - [http://underscorejs.org/#pluck](http://underscorejs.org/#pluck)
-4. Contains - [http://underscorejs.org/#contains](http://underscorejs.org/#contains)
+
+_.pluck(list, propertyName) 
+
+A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.
+
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.pluck(stooges, 'name');
+=> ["moe", "larry", "curly"]
+
+5. Contains - [http://underscorejs.org/#contains](http://underscorejs.org/#contains)
+
+_.contains(list, value) 
+
+Returns true if the value is present in the list. Uses indexOf internally, if list is an Array.
+
+_.contains([1, 2, 3], 3);
+=> true
 
 ### How to tackle this assignment
 
